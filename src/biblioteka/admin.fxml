@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteka.AdminController">
+   <Button layoutX="529.0" layoutY="361.0" mnemonicParsing="false" onAction="#button_2" text="Log out"/>
+   <TextField fx:id="userNameField" layoutX="226.0" layoutY="58.0" promptText="Корисничко Име"/>
+   <TextField fx:id="userPasswordField" layoutX="226.0" layoutY="89.0" promptText="Лозинка"/>
+   <Button layoutX="248.0" layoutY="290.0" mnemonicParsing="false" onAction="#createNewUser" text="Create New User"/>
+   <RadioButton fx:id="rbutton_Admin" layoutX="226.0" layoutY="126.0" mnemonicParsing="false" selected="true"
+                text="Админ">
+      <toggleGroup>
+         <ToggleGroup fx:id="userRoleSelect"/>
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton fx:id="rbutton_Librarian" layoutX="226.0" layoutY="143.0" mnemonicParsing="false" text="Библиотекар"
+                toggleGroup="$userRoleSelect"/>
+   <RadioButton fx:id="rbutton_User" layoutX="226.0" layoutY="160.0" mnemonicParsing="false" text="Читател"
+                toggleGroup="$userRoleSelect"/>
+   <TextField fx:id="fullNameTextField" layoutX="226.0" layoutY="185.0" promptText="Цело име и презиме"/>
+   <TextField fx:id="userEmailField" layoutX="226.0" layoutY="218.0" promptText="Електронска Пошта"/>
+</AnchorPane>
