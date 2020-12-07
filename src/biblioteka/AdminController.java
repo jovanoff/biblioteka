@@ -52,6 +52,14 @@ public class AdminController {
                 preparedStatement.setString(5, "3");
             }
             preparedStatement.executeUpdate();
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Корисникот е успешно внесен!");
+            alert.show();
+            userNameField.clear();
+            fullNameTextField.clear();
+            userEmailField.clear();
+            userPasswordField.clear();
+            userRoleSelect.selectToggle(rbutton_Admin);
         }
     }
 }

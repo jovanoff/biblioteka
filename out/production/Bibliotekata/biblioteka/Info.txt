@@ -1,0 +1,18 @@
+
+//JSON PARSER FROM READ FROM JSON FILE!
+
+    InputStream is = getClass().getResourceAsStream("Books.json");
+    JSONTokener tokener = new JSONTokener(is);
+    JSONObject object = new JSONObject(tokener);
+    JSONArray jsonArray = object.getJSONArray("books");
+    DBConnection dbConnection = new DBConnection();
+    Connection connection = dbConnection.getConnection();
+
+    PreparedStatement preparedStatement = connection.prepareStatement(INSERT_QUERY);
+
+    for(int i = 0; i < jsonArray.length(); i++)
+    {
+        preparedStatement.setString(1, jsonArray.getJSONObject(i).getString("author"));
+        preparedStatement.setString(2, jsonArray.getJSONObject(i).getString("title"));
+        preparedStatement.executeUpdate();
+    }

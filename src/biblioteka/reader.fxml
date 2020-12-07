@@ -10,6 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.scene.control.Label?>
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteka.ReaderController">
    <Button layoutX="690.0" layoutY="557.0" mnemonicParsing="false" onAction="#button_3" text="Log out" />
    <TextField fx:id="textFieldSearchBook" layoutX="14.0" layoutY="64.0" prefHeight="25.0" prefWidth="298.0" />
@@ -19,13 +20,16 @@
          <Font size="16.0" />
       </font>
    </Text>
-   <RadioButton layoutX="141.0" layoutY="31.0" mnemonicParsing="false" selected="true" text="Автор">
+   <RadioButton fx:id="rbutton_author" layoutX="141.0" layoutY="31.0" mnemonicParsing="false" selected="true" text="Автор">
       <toggleGroup>
          <ToggleGroup fx:id="radioGroupSearch" />
       </toggleGroup>
    </RadioButton>
-   <RadioButton layoutX="251.0" layoutY="31.0" mnemonicParsing="false" text="Наслов" toggleGroup="$radioGroupSearch" />
+   <RadioButton fx:id="rbutton_title" layoutX="251.0" layoutY="31.0" mnemonicParsing="false" text="Наслов" toggleGroup="$radioGroupSearch" />
    <TableView fx:id="tableView" layoutX="14.0" layoutY="110.0" prefHeight="472.0" prefWidth="628.0">
+      <placeholder>
+         <Label text="Направи ново барање!"/>
+      </placeholder>
       <columns>
          <TableColumn fx:id="bookAuthor" prefWidth="262.0" text="Автор" />
          <TableColumn fx:id="bookTitle" prefWidth="266.0" text="Наслов" />
