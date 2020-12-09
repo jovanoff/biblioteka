@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import static biblioteka.Constatns.*;
 
 public class LibrarianController {
 
@@ -23,7 +24,7 @@ public class LibrarianController {
     public void button_5(ActionEvent e) throws IOException
     {
         SceneController sceneController = new SceneController();
-        sceneController.sceneSelector(e, "login");
+        sceneController.sceneSelector(e, LOGIN_SCENE, LOGIN_TITLE);
     }
 
     public void button_insert_book(ActionEvent e) throws SQLException
@@ -65,6 +66,6 @@ public class LibrarianController {
     public void button_search_books(ActionEvent e) throws IOException
     {
         SceneController sceneController = new SceneController();
-        sceneController.sceneSelector(e, "reader");
+        sceneController.sceneSelector(e, READER_SCENE, READER_TITLE);
     }
 }

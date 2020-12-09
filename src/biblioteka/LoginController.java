@@ -7,15 +7,13 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import java.io.IOException;
 import java.sql.*;
-import java.util.Locale;
+import static biblioteka.Constatns.*;
 
 public class LoginController
 {
     public SceneController sceneController = new SceneController();
     public TextField userNameField;
     public PasswordField userPasswordField;
-
-    private static final String SEARCH_QUERY = "SELECT * FROM users Where user_name = ? and user_password = ?";
 
     public void button_1(ActionEvent e) throws SQLException, IOException
     {
@@ -41,7 +39,19 @@ public class LoginController
         else
         {
             String userRole = resultSet.getString(6);
-            sceneController.sceneSelector(e, userRole.toLowerCase(Locale.ROOT));
+            switch (userRole)
+            {
+                case "ADMIN":
+                    sceneController.sceneSelector(e, ADMIN_SCENE, ADMIN_TITLE );
+                    break;
+                case "LIBRARIAN":
+                    sceneController.sceneSelector(e, LIBRARIAN_SCENE, LIBRARIAN_TITLE );
+                    break;
+                case "READER":
+                    sceneController.sceneSelector(e, READER_SCENE, READER_TITLE );
+                    break;
+            }
+
         }
     }
 }

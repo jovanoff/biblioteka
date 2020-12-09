@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import static biblioteka.Constatns.*;
 
 public class AdminController {
     public TextField    userNameField;
@@ -18,12 +19,10 @@ public class AdminController {
     public RadioButton  rbutton_User;
     public RadioButton  rbutton_Librarian;
 
-    private static final String INSERT_QUERY = "INSERT INTO users (user_name, user_full_name, user_email, user_password, user_role) VALUES (?, ?, ?, ?, ?)";
-
     public void button_2(ActionEvent e) throws IOException
     {
         SceneController sceneController = new SceneController();
-        sceneController.sceneSelector(e, "login");
+        sceneController.sceneSelector(e, LOGIN_SCENE, LOGIN_TITLE);
     }
 
     public void createNewUser(ActionEvent e) throws SQLException

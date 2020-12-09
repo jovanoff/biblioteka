@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Locale;
+import static biblioteka.Constatns.*;
 
 public class ReaderController {
     public TextField textFieldSearchBook;
@@ -27,7 +28,7 @@ public class ReaderController {
     public void button_3(ActionEvent e) throws IOException
     {
         SceneController sceneController = new SceneController();
-        sceneController.sceneSelector(e, "login");
+        sceneController.sceneSelector(e, LOGIN_SCENE, LOGIN_TITLE);
     }
 
     //Search button

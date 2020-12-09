@@ -6,17 +6,17 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class SceneController
 {
-    public void sceneSelector(ActionEvent e, String s) throws IOException
+    public void sceneSelector(ActionEvent e, String sceneSelect, String title) throws IOException
     {
-       Parent admin_scene_parent = FXMLLoader.load(getClass().getResource(s + ".fxml"));
-       Scene admin_scene = new Scene(admin_scene_parent);
-       Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
-       window.setScene(admin_scene);
-       window.show();
+       Parent sceneParent = FXMLLoader.load(getClass().getResource(sceneSelect));
+       Scene scene = new Scene(sceneParent);
+       Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+       stage.setScene(scene);
+       stage.setTitle(title);
+       stage.show();
     }
 }

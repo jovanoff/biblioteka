@@ -7,34 +7,39 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteka.LibrarianController">
-   <children>
-      <TextField fx:id="textFieldUserName" layoutX="50.0" layoutY="96.0" prefHeight="25.0" prefWidth="200.0" promptText="Корисничко име" />
-      <TextField fx:id="textFieldUserFullName" layoutX="49.0" layoutY="146.0" prefWidth="200.0" promptText="Име и Презиме" />
-      <TextField fx:id="textFieldUserEmail" layoutX="49.0" layoutY="194.0" prefWidth="200.0" promptText="E-mail" />
-      <TextField fx:id="textFieldUserPassword" layoutX="49.0" layoutY="242.0" prefWidth="200.0" promptText="Лозинка" />
-      <Button layoutX="90.0" layoutY="317.0" mnemonicParsing="false" onAction="#button_insert_user" text="Внеси Нов Читател" />
-      <TextField fx:id="textFieldBookAuthor" layoutX="350.0" layoutY="125.0" prefHeight="25.0" prefWidth="200.0" promptText="Автор" />
-      <TextField fx:id="textFieldBookTitle" layoutX="350.0" layoutY="221.0" prefHeight="25.0" prefWidth="200.0" promptText="Наслов" />
-      <Button layoutX="408.0" layoutY="317.0" mnemonicParsing="false" onAction="#button_insert_book" text="Внеси Книга" />
-      <Button layoutX="307.0" layoutY="361.0" mnemonicParsing="false" onAction="#button_search_books" text="Пребарување на книги" />
-      <Button layoutX="532.0" layoutY="361.0" mnemonicParsing="false" onAction="#button_5" text="Logout" />
-      <Line endY="-400.0" layoutX="300.0" layoutY="400.0" startY="1.29290771484375" />
-      <Text layoutX="102.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Корисничко Име" />
-      <Text layoutX="89.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нов Читател">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Text>
-      <Text layoutX="49.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цело Име и Презиме на корисникот" />
-      <Text layoutX="54.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Електронска Пошта на корисникот" />
-      <Text layoutX="126.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Лозинка" />
-      <Text layoutX="395.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нова Книга">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Text>
-      <Text layoutX="375.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Име и Презиме на авторот" />
-      <Text layoutX="399.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Наслов на книгата" />
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteka.LibrarianController">
+   <TextField fx:id="textFieldUserName" layoutX="50.0" layoutY="96.0" prefHeight="25.0" prefWidth="200.0"
+              promptText="Корисничко име"/>
+   <TextField fx:id="textFieldUserFullName" layoutX="49.0" layoutY="146.0" prefWidth="200.0"
+              promptText="Име и Презиме"/>
+   <TextField fx:id="textFieldUserEmail" layoutX="49.0" layoutY="194.0" prefWidth="200.0" promptText="E-mail"/>
+   <TextField fx:id="textFieldUserPassword" layoutX="49.0" layoutY="242.0" prefWidth="200.0" promptText="Лозинка"/>
+   <Button layoutX="90.0" layoutY="317.0" mnemonicParsing="false" onAction="#button_insert_user"
+           text="Внеси Нов Читател"/>
+   <TextField fx:id="textFieldBookAuthor" layoutX="350.0" layoutY="125.0" prefHeight="25.0" prefWidth="200.0"
+              promptText="Автор"/>
+   <TextField fx:id="textFieldBookTitle" layoutX="350.0" layoutY="221.0" prefHeight="25.0" prefWidth="200.0"
+              promptText="Наслов"/>
+   <Button layoutX="408.0" layoutY="317.0" mnemonicParsing="false" onAction="#button_insert_book" text="Внеси Книга"/>
+   <Button layoutX="307.0" layoutY="361.0" mnemonicParsing="false" onAction="#button_search_books"
+           text="Пребарување на книги"/>
+   <Button layoutX="506.0" layoutY="361.0" mnemonicParsing="false" onAction="#button_5" text="Одлогирај се"/>
+   <Line endY="-400.0" layoutX="300.0" layoutY="400.0" startY="1.29290771484375"/>
+   <Text layoutX="102.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Корисничко Име"/>
+   <Text layoutX="89.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нов Читател">
+      <font>
+         <Font size="21.0"/>
+      </font>
+   </Text>
+   <Text layoutX="49.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цело Име и Презиме на корисникот"/>
+   <Text layoutX="54.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Електронска Пошта на корисникот"/>
+   <Text layoutX="126.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Лозинка"/>
+   <Text layoutX="395.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нова Книга">
+      <font>
+         <Font size="21.0"/>
+      </font>
+   </Text>
+   <Text layoutX="375.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Име и Презиме на авторот"/>
+   <Text layoutX="399.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Наслов на книгата"/>
 </AnchorPane>
