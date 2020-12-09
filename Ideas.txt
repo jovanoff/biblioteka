@@ -1,0 +1,11 @@
+1. Change the "english" on the Admin scene
+2. Add Titles on the admin scene fields
+3. Add Titles on all the scenes
+4. Add more context to the books and Tableview
+5. Maybe play around with UUID and Login tokens
+6. Add CSS To everything
+7. Add possibility for Librarian to see if the book is overdue
+8. Add possibility for Librarian to issue a book to a specific Reader
+9. Add possibility for the Reader to ask for loaning a book
+10. Add possibility for the Librarian to issue a warning to a Reader
+11. Maybe re-write the SQL-Database??? and implement MVC -> Model View Controller design pattern?
