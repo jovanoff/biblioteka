@@ -1,0 +1,22 @@
+#login-background
+{
+    -fx-background-color: teal;
+}
+#login-name, #login-password
+{
+    -fx-font-size: 16px;
+    -fx-width: 250px;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: rgba(10, 180, 180, 1);
+    -fx-background-color: rgba(20, 20, 20, 0.2);
+    -fx-text-fill: white;
+    -fx-outline: none;
+}
+#login-button
+{
+    -fx-border-width: 1;
+    -fx-border-color: rgba(10, 180, 180, 1);
+    -fx-background-color: rgba(20, 20, 20, .6);
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+}

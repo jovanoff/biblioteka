@@ -9,18 +9,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteka.LoginController">
+<AnchorPane id="login-background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" stylesheets="/application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteka.LoginController">
    <children>
-      <TextField fx:id="userNameField" layoutX="128.0" layoutY="238.0" promptText="Име" />
-      <PasswordField fx:id="userPasswordField" layoutX="128.0" layoutY="305.0" promptText="Лозинка" />
-      <Button defaultButton="true" layoutX="166.0" layoutY="359.0" mnemonicParsing="false" onAction="#button_1" text="Логирај се" />
-      <Text fontSmoothingType="LCD" layoutX="145.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="КОРИСНИЧКО ИМЕ">
+      <TextField id="login-name" fx:id="userNameField" layoutX="78.0" layoutY="238.0" prefWidth="250.0" promptText="Корисничко име" />
+      <PasswordField id="login-password" fx:id="userPasswordField" layoutX="78.0" layoutY="290.0" prefWidth="250.0" promptText="Лозинка" />
+      <Button id="login-button" defaultButton="true" layoutX="145.0" layoutY="357.0" mnemonicParsing="false" onAction="#button_1" text="Логирај се">
          <font>
-            <Font name="System Bold" size="12.0" />
-         </font></Text>
-      <Text fontSmoothingType="LCD" layoutX="172.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ЛОЗИНКА">
+            <Font size="18.0" />
+         </font></Button>
+      <Text id="label-name-login" fill="WHITE" fontSmoothingType="LCD" layoutX="145.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Најави се">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="25.0" />
          </font></Text>
       <Text layoutX="115.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Изработено од:  Љупчо Јованов" wrappingWidth="175.095703125">
          <font>
@@ -28,7 +27,7 @@
          </font></Text>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/256x256.png" />
+            <Image url="@/256x256.png" />
          </image>
       </ImageView>
    </children>

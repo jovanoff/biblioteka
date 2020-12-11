@@ -14,6 +14,7 @@ public class SceneController
     {
        Parent sceneParent = FXMLLoader.load(getClass().getResource(sceneSelect));
        Scene scene = new Scene(sceneParent);
+       scene.getStylesheets().add("application.css");
        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
        stage.setScene(scene);
        stage.setTitle(title);

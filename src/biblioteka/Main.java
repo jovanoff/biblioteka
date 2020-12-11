@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 import static biblioteka.Constatns.*;
 
 public class Main extends Application
@@ -16,10 +18,12 @@ public class Main extends Application
     {
         Parent login_scene = FXMLLoader.load(getClass().getResource("login.fxml"));
         window = primaryStage;
+        window.initStyle(StageStyle.UNDECORATED);
         window.setTitle(LOGIN_TITLE);
         window.getIcons().add(ICON);
         window.setScene(new Scene(login_scene, 400, 500));
         window.setResizable(false);
+
         window.show();
     }
 
