@@ -7,39 +7,57 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteka.LibrarianController">
-   <TextField fx:id="textFieldUserName" layoutX="50.0" layoutY="96.0" prefHeight="25.0" prefWidth="200.0"
-              promptText="Корисничко име"/>
-   <TextField fx:id="textFieldUserFullName" layoutX="49.0" layoutY="146.0" prefWidth="200.0"
-              promptText="Име и Презиме"/>
-   <TextField fx:id="textFieldUserEmail" layoutX="49.0" layoutY="194.0" prefWidth="200.0" promptText="E-mail"/>
-   <TextField fx:id="textFieldUserPassword" layoutX="49.0" layoutY="242.0" prefWidth="200.0" promptText="Лозинка"/>
-   <Button layoutX="90.0" layoutY="317.0" mnemonicParsing="false" onAction="#button_insert_user"
-           text="Внеси Нов Читател"/>
-   <TextField fx:id="textFieldBookAuthor" layoutX="350.0" layoutY="125.0" prefHeight="25.0" prefWidth="200.0"
-              promptText="Автор"/>
-   <TextField fx:id="textFieldBookTitle" layoutX="350.0" layoutY="221.0" prefHeight="25.0" prefWidth="200.0"
-              promptText="Наслов"/>
-   <Button layoutX="408.0" layoutY="317.0" mnemonicParsing="false" onAction="#button_insert_book" text="Внеси Книга"/>
-   <Button layoutX="307.0" layoutY="361.0" mnemonicParsing="false" onAction="#button_search_books"
-           text="Пребарување на книги"/>
-   <Button layoutX="506.0" layoutY="361.0" mnemonicParsing="false" onAction="#button_5" text="Одлогирај се"/>
-   <Line endY="-400.0" layoutX="300.0" layoutY="400.0" startY="1.29290771484375"/>
-   <Text layoutX="102.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Корисничко Име"/>
-   <Text layoutX="89.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нов Читател">
+<AnchorPane id="background" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteka.LibrarianController">
+   <TextField id="librarian-user-field" fx:id="textFieldUserName" layoutX="14.0" layoutY="127.0" prefHeight="25.0" prefWidth="274.0" promptText="Корисничко име" />
+   <TextField id="librarian-fullname-field" fx:id="textFieldUserFullName" layoutX="14.0" layoutY="176.0" prefHeight="25.0" prefWidth="274.0" promptText="Име и Презиме" />
+   <TextField id="librarian-email-field" fx:id="textFieldUserEmail" layoutX="14.0" layoutY="225.0" prefHeight="25.0" prefWidth="274.0" promptText="E-mail" />
+   <TextField id="librarian-password-field" fx:id="textFieldUserPassword" layoutX="15.0" layoutY="272.0" prefHeight="25.0" prefWidth="274.0" promptText="Лозинка" />
+   <Button id="librarian-adduser-button" layoutX="90.0" layoutY="317.0" mnemonicParsing="false" onAction="#button_insert_user" text="Внеси Нов Читател" />
+   <TextField id="librarian-author-field" fx:id="textFieldBookAuthor" layoutX="313.0" layoutY="148.0" prefHeight="25.0" prefWidth="274.0" promptText="Автор" />
+   <TextField id="librarian-title-field" fx:id="textFieldBookTitle" layoutX="313.0" layoutY="244.0" prefHeight="25.0" prefWidth="274.0" promptText="Наслов" />
+   <Button id="librarian-addbook-button" layoutX="408.0" layoutY="317.0" mnemonicParsing="false" onAction="#button_insert_book" text="Внеси Книга" />
+   <Button id="librarian-search-button" layoutX="307.0" layoutY="361.0" mnemonicParsing="false" onAction="#button_search_books" text="Пребарување на книги" />
+   <Button id="librarian-logoff-button" layoutX="506.0" layoutY="361.0" mnemonicParsing="false" onAction="#button_5" text="Одлогирај се" />
+   <Line endY="-348.0" layoutX="300.0" layoutY="400.0" startY="1.29290771484375" />
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Корисничко Име">
       <font>
-         <Font size="21.0"/>
+         <Font name="System Bold" size="12.0" />
+      </font></Text>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="95.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нов Читател">
+      <font>
+         <Font name="System Bold" size="18.0" />
       </font>
    </Text>
-   <Text layoutX="49.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цело Име и Презиме на корисникот"/>
-   <Text layoutX="54.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Електронска Пошта на корисникот"/>
-   <Text layoutX="126.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Лозинка"/>
-   <Text layoutX="395.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нова Книга">
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цело Име и Презиме на корисникот">
       <font>
-         <Font size="21.0"/>
+         <Font name="System Bold" size="12.0" />
+      </font></Text>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Електронска Пошта на корисникот">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Text>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="15.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Лозинка">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Text>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="401.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нова Книга">
+      <font>
+         <Font name="System Bold" size="18.0" />
       </font>
    </Text>
-   <Text layoutX="375.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Име и Презиме на авторот"/>
-   <Text layoutX="399.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Наслов на книгата"/>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="313.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Име и Презиме на авторот">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Text>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="313.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Наслов на книгата">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Text>
+   <Line endX="297.0" endY="3.5" layoutX="301.0" layoutY="48.0" startX="-301.0" startY="3.5" />
+   <Text fill="WHITE" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="БИБЛИОТЕКА - БИБЛИОТЕКАР">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Text>
+   <Button id="librarian-close-button" fx:id="closeButton" layoutX="562.0" layoutY="13.0" mnemonicParsing="false" onAction="#exitButton" text="X" />
 </AnchorPane>

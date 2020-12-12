@@ -2,8 +2,11 @@ package biblioteka;
 
 import Connectivity.DBConnection;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,6 +21,7 @@ public class LibrarianController {
     public TextField textFieldUserEmail;
     public TextField textFieldBookAuthor;
     public TextField textFieldBookTitle;
+    @FXML javafx.scene.control.Button closeButton;
     private static final String INSERT_BOOK_QUERY = "INSERT INTO books (book_author, book_title, book_available) VALUES (?, ?, 1)";
     private static final String INSERT_USER_QUERY = "INSERT INTO users (user_name, user_full_name, user_email, user_password, user_role) VALUES (?, ?, ?, ?, 3)";
 
@@ -67,5 +71,11 @@ public class LibrarianController {
     {
         SceneController sceneController = new SceneController();
         sceneController.sceneSelector(e, READER_SCENE, READER_TITLE);
+    }
+
+    public void exitButton(ActionEvent e)
+    {
+        Stage window = (Stage) closeButton.getScene().getWindow();
+        window.close();
     }
 }

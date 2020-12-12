@@ -2,9 +2,12 @@ package biblioteka;
 
 import Connectivity.DBConnection;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.sql.*;
 import static biblioteka.Constatns.*;
@@ -14,6 +17,7 @@ public class LoginController
     public SceneController sceneController = new SceneController();
     public TextField userNameField;
     public PasswordField userPasswordField;
+    @FXML private javafx.scene.control.Button closeButton;
 
     public void button_1(ActionEvent e) throws SQLException, IOException
     {
@@ -53,5 +57,11 @@ public class LoginController
             }
 
         }
+    }
+
+    public void exitButton(ActionEvent e)
+    {
+        Stage window = (Stage) closeButton.getScene().getWindow();
+        window.close();
     }
 }

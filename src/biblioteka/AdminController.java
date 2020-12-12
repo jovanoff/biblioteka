@@ -2,7 +2,10 @@ package biblioteka;
 
 import Connectivity.DBConnection;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,6 +21,7 @@ public class AdminController {
     public RadioButton  rbutton_Admin;
     public RadioButton  rbutton_User;
     public RadioButton  rbutton_Librarian;
+    @FXML javafx.scene.control.Button closeButton;
 
     public void button_2(ActionEvent e) throws IOException
     {
@@ -60,5 +64,11 @@ public class AdminController {
             userPasswordField.clear();
             userRoleSelect.selectToggle(rbutton_Admin);
         }
+    }
+
+    public void exitAdminButton(ActionEvent e)
+    {
+        Stage window = (Stage) closeButton.getScene().getWindow();
+        window.close();
     }
 }

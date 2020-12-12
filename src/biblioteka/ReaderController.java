@@ -4,8 +4,11 @@ import Connectivity.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -22,6 +25,7 @@ public class ReaderController {
     public TableColumn<Book, Boolean> bookAvailable;
     public RadioButton rbutton_author;
     public RadioButton rbutton_title;
+    @FXML javafx.scene.control.Button closeButton;
     ObservableList<Book> observableList = FXCollections.observableArrayList();
 
     //logout button
@@ -79,5 +83,11 @@ public class ReaderController {
         bookTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
         bookAvailable.setCellValueFactory(new PropertyValueFactory<>("available"));
         tableView.setItems(observableList);
+    }
+
+    public void exitButton(ActionEvent e)
+    {
+        Stage window = (Stage) closeButton.getScene().getWindow();
+        window.close();
     }
 }

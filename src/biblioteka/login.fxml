@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="login-background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" stylesheets="/application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteka.LoginController">
+<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" stylesheets="/application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteka.LoginController">
    <children>
       <TextField id="login-name" fx:id="userNameField" layoutX="78.0" layoutY="238.0" prefWidth="250.0" promptText="Корисничко име" />
       <PasswordField id="login-password" fx:id="userPasswordField" layoutX="78.0" layoutY="290.0" prefWidth="250.0" promptText="Лозинка" />
@@ -30,5 +30,15 @@
             <Image url="@/256x256.png" />
          </image>
       </ImageView>
+      <Button id="login-exit-button" fx:id="closeButton" layoutX="362.0" layoutY="14.0" mnemonicParsing="false" onAction="#exitButton" text="X" textAlignment="CENTER">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="141.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="БИБЛИОТЕКА">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
